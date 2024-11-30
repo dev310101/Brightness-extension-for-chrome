@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Brightness and Contrast Control</title>
+  <script src="popup.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 15px;
+      width: 250px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    #brightnessValue, #contrastValue {
+      font-weight: bold;
+    }
+    button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <label>
+    Brightness: <span id="brightnessValue">0%</span>
+  </label>
+  <input type="range" id="brightnessSlider" min="-100" max="100" value="0">
+  
+  <label>
+    Contrast: <span id="contrastValue">0%</span>
+  </label>
+  <input type="range" id="contrastSlider" min="-100" max="100" value="0">
+  
+  <button id="resetFilters">Reset to Default</button>
+</body>
+</html>
